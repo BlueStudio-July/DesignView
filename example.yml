@@ -1,0 +1,68 @@
+default: true
+opencmd: 'cmd,menu,test'
+items:
+  field1:
+    type: 'field'
+    priority: 1
+    options:
+    - max=20
+    - height=20
+    - width=100
+    - x=300
+    - y=100
+  button1:
+    #组件的类型
+    type: 'button'
+    #加载优先级
+    priority: 2
+    #组件的一些必须设置
+    options:
+    - text=&a点我免费获取OP
+    - width=100
+    - x=270
+    - y=50
+    clickstatus:
+      commands: '[plugin:close]'
+      customstatus:
+        live:
+          priority: 4
+          status: '%player_minutes_lived% > 59'
+          nobadCommands: '[plugin:close][plugin:send &c点击失败!你需要生存&f60min/1小时&c才可点击!]'
+  button2:
+    #组件的类型
+    type: 'button'
+    #加载优先级
+    priority: 3
+    #组件的一些必须设置
+    options:
+    - text=&a点我免费获取点券
+    - width=100
+    - x=270
+    - y=72
+    clickstatus:
+      commands: '[plugin:close]'
+      customstatus:
+        live:
+          priority: 4
+          status: '%player_minutes_lived% > 59'
+          nobadCommands: '[plugin:close][plugin:send &c点击失败!你需要生存&f60min/1小时&c才可点击!]'
+  image1:
+    type: 'image'
+    priority: 4
+    options:
+    - path=https://ps.ssl.qhimg.com/sdmt/148_135_100/t01ffcf502ca045baa3.jpg
+    - height=200
+    - width=190
+    - x=100
+    - y=50
+    - textureX=0
+    - textureY=0
+    - textureWidth=300
+    - textureHeight=200
+  text1:
+    type: 'text'
+    priority: 5
+    options:
+    - str=&b测试标签,不服来砍我
+    - x=290
+    - y=130
