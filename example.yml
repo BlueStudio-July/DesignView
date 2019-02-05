@@ -1,5 +1,10 @@
 default: true
-opencmd: 'cmd,menu,test'
+opencmd: 'cmd,menu,test' 
+clickstatus:
+  live:
+    priority: 4
+    status: '%player_minutes_lived% > 59'
+    nobadCommands: '[plugin:close][plugin:send &cæ‰“å¼€å¤±è´¥!ä½ éœ€è¦ç”Ÿå­˜&f60min/1å°æ—¶&cæ‰å¯æ‰“å¼€gui!]'
 items:
   field1:
     type: 'field'
@@ -11,41 +16,41 @@ items:
     - x=300
     - y=100
   button1:
-    #×é¼şµÄÀàĞÍ
+    #ç»„ä»¶çš„ç±»å‹
     type: 'button'
-    #¼ÓÔØÓÅÏÈ¼¶
+    #åŠ è½½ä¼˜å…ˆçº§
     priority: 2
-    #×é¼şµÄÒ»Ğ©±ØĞëÉèÖÃ
+    #ç»„ä»¶çš„ä¸€äº›å¿…é¡»è®¾ç½®
     options:
-    - text=&aµãÎÒÃâ·Ñ»ñÈ¡OP
+    - text=&aç‚¹æˆ‘å…è´¹è·å–OP
     - width=100
     - x=270
     - y=50
     clickstatus:
-      commands: '[plugin:close]'
+      commands: '[plugin:close][plugin:time@1][plugin:send &aä½ å·²ç»è·å¾—opäº†][plugin:time@1][plugin:send ä¸ä¿¡ä½ è¾“å…¥/killè¯•è¯•][plugin:time@10][op:kill {player}][plugin:send &dè¾“å…¥æˆåŠŸ,åˆšåˆšåªæ˜¯æœåŠ¡å™¨å¡äº†è€Œå·²']
       customstatus:
         live:
           priority: 4
           status: '%player_minutes_lived% > 59'
-          nobadCommands: '[plugin:close][plugin:send &cµã»÷Ê§°Ü!ÄãĞèÒªÉú´æ&f60min/1Ğ¡Ê±&c²Å¿Éµã»÷!]'
+          nobadCommands: '[plugin:close][plugin:send &cç‚¹å‡»å¤±è´¥!ä½ éœ€è¦ç”Ÿå­˜&f60min/1å°æ—¶&cæ‰å¯ç‚¹å‡»!]'
   button2:
-    #×é¼şµÄÀàĞÍ
+    #ç»„ä»¶çš„ç±»å‹
     type: 'button'
-    #¼ÓÔØÓÅÏÈ¼¶
+    #åŠ è½½ä¼˜å…ˆçº§
     priority: 3
-    #×é¼şµÄÒ»Ğ©±ØĞëÉèÖÃ
+    #ç»„ä»¶çš„ä¸€äº›å¿…é¡»è®¾ç½®
     options:
-    - text=&aµãÎÒÃâ·Ñ»ñÈ¡µãÈ¯
+    - text=&aç‚¹æˆ‘å…è´¹è·å–ç‚¹åˆ¸
     - width=100
     - x=270
     - y=72
     clickstatus:
-      commands: '[plugin:close]'
+      commands: '[plugin:close][plugin:time@1][plugin:send &aä½ å·²ç»è·å¾—ç‚¹åˆ¸äº†][plugin:time@1][plugin:send ä¸ä¿¡ä½ è¾“å…¥/killè¯•è¯•][plugin:time@10][op:kill {player}][plugin:send &dè¾“å…¥æˆåŠŸ,åˆšåˆšåªæ˜¯æœåŠ¡å™¨å¡äº†è€Œå·²']
       customstatus:
         live:
           priority: 4
           status: '%player_minutes_lived% > 59'
-          nobadCommands: '[plugin:close][plugin:send &cµã»÷Ê§°Ü!ÄãĞèÒªÉú´æ&f60min/1Ğ¡Ê±&c²Å¿Éµã»÷!]'
+          nobadCommands: '[plugin:close][plugin:send &cç‚¹å‡»å¤±è´¥!ä½ éœ€è¦ç”Ÿå­˜&f60min/1å°æ—¶&cæ‰å¯ç‚¹å‡»!]'
   image1:
     type: 'image'
     priority: 4
@@ -63,6 +68,6 @@ items:
     type: 'text'
     priority: 5
     options:
-    - str=&b²âÊÔ±êÇ©,²»·şÀ´¿³ÎÒ
+    - str=&bæµ‹è¯•æ ‡ç­¾,ä¸æœæ¥ç æˆ‘
     - x=290
     - y=130
